@@ -21,14 +21,14 @@ public class BaseTest {
         // BROWSER => chrome / firefox
         // HUB_HOST => localhost / 10.0.1.3 / hostname
 
-        String host = "192.168.1.13";   // localhost
+        String host = "localhost";   // localhost
         ImmutableCapabilities capabilities;
         FirefoxOptions firefoxOptions = new FirefoxOptions();
         ChromeOptions chromeOptions = new ChromeOptions();
         
-        // if(System.getProperty("HUB_HOST") != null){
-        //     host = System.getProperty("HUB_HOST");
-        // }
+        if(System.getProperty("HUB_HOST") != null){
+            host = System.getProperty("HUB_HOST");
+        }
 
         String testName = ctx.getCurrentXmlTest().getName();
 
