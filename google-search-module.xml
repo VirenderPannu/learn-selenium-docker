@@ -1,24 +1,24 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="google-search-module">
-    <test name="google-search-java" browser="chrome">
+    <test name="google-search-java">
         <parameter name="searchText" value="java" />
         <classes>
             <class name="com.newtours.tests.GoogleSearchTest" />
         </classes>
     </test>
-    <test name="google-search-docker" browser="chrome">
+    <test name="google-search-docker">
         <parameter name="searchText" value="docker" />
         <classes>
             <class name="com.newtours.tests.GoogleSearchTest" />
         </classes>
     </test>
-    <test name="google-search-webdriver" browser="chrome">
+    <test name="google-search-webdriver">
         <parameter name="searchText" value="webdriver" />
         <classes>
             <class name="com.newtours.tests.GoogleSearchTest" />
         </classes>
     </test>
-    <test name="google-search-kubernetes" browser="chrome">
+    <test name="google-search-kubernetes">
         <parameter name="searchText" value="kubernetes" />
         <classes>
             <class name="com.newtours.tests.GoogleSearchTest" />
