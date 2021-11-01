@@ -16,8 +16,8 @@ ADD target/libs							libs
 # please ADD that as well
 
 # ADD suite files
-ADD book-flight-module.xml				book-flight-module.xml
-ADD search-module.xml					search-module.xml
+ADD google-search-module.xml			google-search-module.xml
+ADD duckduckgo-search-module.xml		duckduckgo-search-module.xml
 
 #ADD health check script
 ADD healthcheck.sh                      healthcheck.sh
@@ -32,4 +32,4 @@ ENTRYPOINT sh healthcheck.sh
 # To create the docker image use following
 # $ docker build -t=virenderpannu/selenium-docker .
 # To create the docker container use following
-# $ docker run -e HUB_HOST=192.168.1.13 -e MODULE=search-module.xml -e BROWSER=chrome -v /Users/virender.singh/Desktop/dockerhub/output:/usr/share/learn/test-output virenderpannu/selenium-docker
+# $ docker run -e HUB_HOST=192.168.1.13 -e MODULE=google-search-module.xml -e BROWSER=chrome -v /Users/virender.singh/Desktop/dockerhub/output:/usr/share/learn/test-output virenderpannu/selenium-docker

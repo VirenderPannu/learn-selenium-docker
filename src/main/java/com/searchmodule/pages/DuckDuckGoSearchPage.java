@@ -1,4 +1,4 @@
-package com.newtours.pages;
+package com.searchmodule.pages;
 
 import java.time.Duration;
 
@@ -6,30 +6,25 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class RegistrationConfirmationPage {
+public class DuckDuckGoSearchPage {
 
     private WebDriver driver;
     private WebDriverWait wait;
 
-    @FindBy(partialLinkText = "sign-in")
-    private WebElement signinLink;
+    @FindBy(name="q")
+    private WebElement searchTextBox;
 
-    @FindBy(linkText = "Flights")
-    private WebElement flightsLink;
-
-    public RegistrationConfirmationPage(WebDriver driver){
+    public DuckDuckGoSearchPage(WebDriver driver){
         this.driver = driver;
         // this.wait = new WebDriverWait(driver, 30);
         this.driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
         PageFactory.initElements(driver, this);
     }
 
-    public void goToFlightDetailsPage(){
-        this.wait.until(ExpectedConditions.visibilityOf(this.signinLink));
-        this.flightsLink.click();
+    public void goTo() throws InterruptedException{
+        this.driver.get("https://duckduckgo.com/");
     }
 
 }
