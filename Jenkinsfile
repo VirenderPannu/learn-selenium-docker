@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build Jar') {
             agent {  // Building jar: /Users/virender.singh/Desktop/dockerhub/slave/workspace/SELENIUM_DOCKER_BUILDER/target/selenium-docker-tests.jar
-                docker {
+                docker { // mvn clean package -DskipTests
                     image 'maven:3-alpine'
                     args '-v $HOME/.m2:/root/.m2'
                 }
