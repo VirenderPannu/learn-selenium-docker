@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [google-search-module]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="google-search-java(failed)">
+    <parameter name="searchText" value="java"/>
+    <classes>
+      <class name="com.newtours.tests.GoogleSearchTest">
+        <methods>
+          <include name="googleSearchTest"/>
+          <include name="setupParameters"/>
+          <include name="quitDriver"/>
+          <include name="setupDriver"/>
+        </methods>
+      </class> <!-- com.newtours.tests.GoogleSearchTest -->
+    </classes>
+  </test> <!-- google-search-java(failed) -->
+  <test thread-count="5" name="google-search-docker(failed)">
+    <parameter name="searchText" value="docker"/>
+    <classes>
+      <class name="com.newtours.tests.GoogleSearchTest">
+        <methods>
+          <include name="googleSearchTest"/>
+          <include name="setupParameters"/>
+          <include name="quitDriver"/>
+          <include name="setupDriver"/>
+        </methods>
+      </class> <!-- com.newtours.tests.GoogleSearchTest -->
+    </classes>
+  </test> <!-- google-search-docker(failed) -->
+  <test thread-count="5" name="google-search-webdriver(failed)">
+    <parameter name="searchText" value="webdriver"/>
+    <classes>
+      <class name="com.newtours.tests.GoogleSearchTest">
+        <methods>
+          <include name="googleSearchTest"/>
+          <include name="setupParameters"/>
+          <include name="quitDriver"/>
+          <include name="setupDriver"/>
+        </methods>
+      </class> <!-- com.newtours.tests.GoogleSearchTest -->
+    </classes>
+  </test> <!-- google-search-webdriver(failed) -->
+  <test thread-count="5" name="google-search-kubernetes(failed)">
+    <parameter name="searchText" value="kubernetes"/>
+    <classes>
+      <class name="com.newtours.tests.GoogleSearchTest">
+        <methods>
+          <include name="googleSearchTest"/>
+          <include name="setupParameters"/>
+          <include name="quitDriver"/>
+          <include name="setupDriver"/>
+        </methods>
+      </class> <!-- com.newtours.tests.GoogleSearchTest -->
+    </classes>
+  </test> <!-- google-search-kubernetes(failed) -->
+</suite> <!-- Failed suite [google-search-module] -->
